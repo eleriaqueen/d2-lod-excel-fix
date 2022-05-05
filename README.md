@@ -2,7 +2,7 @@
 
 Allow "Diablo II - Lord of Destruction" to load and use tabbed txt files while they are open in an Excel-like application.
 
-The goal is to set the flag FILE_SHARE_WRITE (0x00000002) in addition to FILE_SHARE_READ (0x00000001) before the game calls CreateFileA().
+This method adds the FILE_SHARE_WRITE (0x02) flag to a specific [CreateFileA()](https://docs.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea) found in Storm.dll ordinal 268.
 
 ## Details
 
