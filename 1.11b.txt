@@ -1,0 +1,21 @@
+Storm.dll Ordinal 268
+Base Address 0x6fbf0000
+
+0x6fc03f4e      push    0          ; HANDLE hTemplateFile
+0x6fc03f50      push    0x8000000  ; DWORD dwFlagsAndAttributes
+0x6fc03f55      push    3          ; 3 ; DWORD dwCreationDisposition
+0x6fc03f57      push    0          ; LPSECURITY_ATTRIBUTES lpSecurityAttributes
+0x6fc03f59      push    1          ; 1 ; DWORD dwShareMode
+0x6fc03f5b      push    0x80000000 ; DWORD dwDesiredAccess
+0x6fc03f60      lea     edx, [lpFileName]
+0x6fc03f64      push    edx        ; LPCSTR lpFileName
+0x6fc03f65      call    dword [CreateFileA] ; 0x6fc331e8 ; HANDLE CreateFileA(LPCSTR lpFileName, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile)
+
+
+Replace
+
+0x6fc03f59      push    1
+
+With
+
+0x6fc03f59      push    3
