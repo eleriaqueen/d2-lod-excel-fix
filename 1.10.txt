@@ -11,10 +11,16 @@ Base Address 0x6ffb0000
 0x6ffc7ff9      push    ecx        ; LPCSTR lpFileName
 0x6ffc7ffa      call    dword [CreateFileA] ; 0x6ffe1190 ; HANDLE CreateFileA(LPCSTR lpFileName, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile)
 
+[How to apply Fix]
+
+Go to file offset 0x17FEE
+
 Replace
 
-0x6ffc7fee      push    1
+Asm: push 1
+Hex: 6A 01
 
 With
 
-0x6ffc7fee      push    3
+Asm: push 3
+Hex: 6A 03
