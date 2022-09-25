@@ -15,6 +15,8 @@ Base Address 0x00400000
 
 Go to file offset 0x00014b4e
 
+Or search for hex string: 56 6800000008 6A 03 56 6A 01 6800000080
+
 Replace
 
 Asm: push 1
