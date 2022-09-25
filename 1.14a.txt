@@ -1,0 +1,28 @@
+Game.exe
+Base Address 0x00400000
+
+0x0041b3e5      push    esi        ; HANDLE hTemplateFile
+0x0041b3e6      push    0x8000000  ; DWORD dwFlagsAndAttributes
+0x0041b3eb      push    3          ; 3 ; DWORD dwCreationDisposition
+0x0041b3ed      push    esi        ; LPSECURITY_ATTRIBUTES lpSecurityAttributes
+0x0041b3ee      push    1          ; 1 ; DWORD dwShareMode
+0x0041b3f0      push    0x80000000 ; DWORD dwDesiredAccess
+0x0041b3f5      lea     eax, [lpFileName]
+0x0041b3f9      push    eax        ; LPCSTR lpFileName
+0x0041b3fa      call    dword [CreateFileA] ; 0x6cd184 ; HANDLE CreateFileA(LPCSTR lpFileName, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile)
+
+[How to apply Fix]
+
+Go to file offset 0x0001b3ee
+
+Or search for hex string: 56 6800000008 6A 03 56 6A 01 6800000080
+
+Replace
+
+Asm: push 1
+Hex: 6A 01
+
+With 
+
+Asm: push 3
+Hex: 6A 03
