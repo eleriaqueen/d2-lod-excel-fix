@@ -1,6 +1,6 @@
 # Diablo II - LOD - "Excel" Fix
 
-Allow "Diablo II - Lord of Destruction" to load and use tabbed txt files while they are open in an Excel type application.
+Allows "Diablo II - Lord of Destruction" to load and use tabbed txt files while they are open in an Excel type application.
 
 ## How to use the info in this repository
 
