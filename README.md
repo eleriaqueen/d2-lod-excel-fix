@@ -1,6 +1,10 @@
 # Diablo II - LOD - "Excel" Fix
 
-Allow "Diablo II - Lord of Destruction" to load and use tabbed txt files while they are open in an Excel-like application.
+Allow "Diablo II - Lord of Destruction" to load and use tabbed txt files while they are open in an Excel type application.
+
+## How to use the info in this repository
+
+Bare minimum you need a hexadecimal editor and need to know how to search for and how to modify hex values using this type of software.
 
 ## Details
 
