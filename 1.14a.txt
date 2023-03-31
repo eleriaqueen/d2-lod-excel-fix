@@ -16,12 +16,12 @@ Go to file offset 0x0001b3ee
 
 Or search for hex string: 56 6800000008 6A 03 56 6A 01 6800000080
 
-Replace
+Find the following instruction/bytes
 
 Asm: push 1
 Hex: 6A 01
 
-With 
+Replace with 
 
 Asm: push 3
 Hex: 6A 03
