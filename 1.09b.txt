@@ -1,5 +1,6 @@
-Storm.dll Ordinal 268
-Base Address 0x6ffb0000
+Storm.dll (Base Address 0x6ffb0000)
+
+In function: SFileOpenFileEx (Ordinal 268)
 
 0x6ffc8c13      push    0          ; HANDLE hTemplateFile
 0x6ffc8c15      push    0x8000000  ; DWORD dwFlagsAndAttributes

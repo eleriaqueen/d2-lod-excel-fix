@@ -1,5 +1,4 @@
-Game.exe
-Base Address 0x00400000
+Game.exe (Base Address 0x00400000)
 
 0x0041b3e5      push    esi        ; HANDLE hTemplateFile
 0x0041b3e6      push    0x8000000  ; DWORD dwFlagsAndAttributes
