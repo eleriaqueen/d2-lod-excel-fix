@@ -1,0 +1,29 @@
+Storm.dll (Base Address 0x6ffb0000)
+
+In function: SFileOpenFileEx (Ordinal 268)
+
+0x6ffc8643      push    0          ; HANDLE hTemplateFile
+0x6ffc8645      push    0x8000000  ; DWORD dwFlagsAndAttributes
+0x6ffc864a      push    3          ; 3 ; DWORD dwCreationDisposition
+0x6ffc864c      push    0          ; LPSECURITY_ATTRIBUTES lpSecurityAttributes
+0x6ffc864e      push    1          ; 1 ; DWORD dwShareMode
+0x6ffc8650      lea     ecx, [lpFileName]
+0x6ffc8654      push    0x80000000 ; DWORD dwDesiredAccess
+0x6ffc8659      push    ecx        ; LPCSTR lpFileName
+0x6ffc865a      call    dword [CreateFileA] ; 0x6ffe1190 ; HANDLE CreateFileA(LPCSTR lpFileName, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile)
+
+[How to apply Fix]
+
+Go to file offset 0x18643
+
+Or search for hex string: 6800000008 6A 03 6A 00 6A 01 8D4C2440
+
+Replace
+
+Asm: push 1
+Hex: 6A 01
+
+With
+
+Asm: push 3
+Hex: 6A 03
