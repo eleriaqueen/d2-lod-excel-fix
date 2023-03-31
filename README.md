@@ -6,6 +6,8 @@ Allow "Diablo II - Lord of Destruction" to load and use tabbed txt files while t
 
 Bare minimum you need a hexadecimal editor and need to know how to search for and how to modify hex values using this type of software.
 
+Recommended hex editor : [ImHex](https://github.com/WerWolv/ImHex)
+
 ## Details
 
 Target: SFileOpenFileEx (Storm.dll Ordinal 268).
